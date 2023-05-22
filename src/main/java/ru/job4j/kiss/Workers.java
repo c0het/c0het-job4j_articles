@@ -18,16 +18,20 @@ public class Workers {
 
     @Override
     public String toString() {
-        return "Workers{" +
-                "experience=" + experience +
-                ", name='" + name + '\'' +
-                '}';
+        return "Workers{"
+                + "experience=" + experience
+                + ", name='" + name + '\''
+                + '}';
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Workers workers = (Workers) o;
         return experience == workers.experience && name.equals(workers.name);
     }
