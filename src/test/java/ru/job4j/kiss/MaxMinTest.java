@@ -14,9 +14,9 @@ public class MaxMinTest {
         MaxMin maxMin = new MaxMin();
         KissComparator comparator = new KissComparator();
         List<Workers> workers = new ArrayList<>(Arrays.asList((new Workers(10, "Nikolai")),
-                new Workers(9, "Egor"),new Workers(6, "Dmitrii"),
+                new Workers(9, "Egor"), new Workers(6, "Dmitrii"),
                 new Workers(15, "Stanislav")));
-        Assert.assertEquals(maxMin.max(workers,comparator), new Workers(15, "Stanislav"));
+        Assert.assertEquals(maxMin.max(workers, comparator), new Workers(15, "Stanislav"));
     }
 
     @Test
@@ -24,9 +24,9 @@ public class MaxMinTest {
         MaxMin maxMin = new MaxMin();
         KissComparator comparator = new KissComparator();
         List<Workers> workers = new ArrayList<>(Arrays.asList((new Workers(10, "Nikolai")),
-                new Workers(15, "Egor"),new Workers(6, "Dmitrii"),
+                new Workers(15, "Egor"), new Workers(6, "Dmitrii"),
                 new Workers(15, "Stanislav")));
-        Assert.assertEquals(maxMin.max(workers,comparator), new Workers(15, "Stanislav"));
+        Assert.assertEquals(maxMin.max(workers, comparator), new Workers(15, "Stanislav"));
     }
 
     @Test
@@ -34,9 +34,9 @@ public class MaxMinTest {
         MaxMin maxMin = new MaxMin();
         KissComparator comparator = new KissComparator();
         List<Workers> workers = new ArrayList<>(Arrays.asList((new Workers(10, "Nikolai")),
-                new Workers(6, "Egor"),new Workers(6, "Dmitrii"),
+                new Workers(6, "Egor"), new Workers(6, "Dmitrii"),
                 new Workers(15, "Stanislav")));
-        Assert.assertEquals(maxMin.min(workers,comparator), new Workers(6, "Dmitrii"));
+        Assert.assertEquals(maxMin.min(workers, comparator), new Workers(6, "Dmitrii"));
     }
 
     @Test
@@ -44,9 +44,9 @@ public class MaxMinTest {
         MaxMin maxMin = new MaxMin();
         KissComparator comparator = new KissComparator();
         List<Workers> workers = new ArrayList<>(Arrays.asList((new Workers(10, "Nikolai")),
-                new Workers(9, "Egor"),new Workers(6, "Dmitrii"),
+                new Workers(9, "Egor"), new Workers(6, "Dmitrii"),
                 new Workers(15, "Stanislav")));
-        Assert.assertEquals(maxMin.min(workers,comparator), new Workers(6, "Dmitrii"));
+        Assert.assertEquals(maxMin.min(workers, comparator), new Workers(6, "Dmitrii"));
     }
 }
 
