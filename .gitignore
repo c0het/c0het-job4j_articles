@@ -26,3 +26,9 @@ target
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/db-dir/articles.tmp/
+/db-dir/articles.lck
+/db-dir/articles.log
+/db-dir/articles.properties
+/db-dir/articles.script
+/db-dir/articles.script.new
