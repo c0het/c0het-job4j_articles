@@ -8,8 +8,6 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
 
-        //Нуженые тесты. 1) Место занято. 2) не верное место 3) сеанс не найден 4) сеанс уже добавлен
-
 @Disabled("Тесты отключены. Удалить аннотацию после реализации всех методов по заданию.")
 public class Cinema3DTest {
     @Test
