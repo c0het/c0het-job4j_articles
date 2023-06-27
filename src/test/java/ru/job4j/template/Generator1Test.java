@@ -1,12 +1,12 @@
 package ru.job4j.template;
 
 import org.junit.Ignore;
-import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class Generator1Test {
 
@@ -14,7 +14,6 @@ class Generator1Test {
     String template = new String();
 
     @Ignore
-    @Test
     public void whenTemplateDontHaveKeys() {
         Generator generator = new Generator1();
         args.put("name", "ivan");
@@ -24,7 +23,6 @@ class Generator1Test {
     }
 
     @Ignore
-    @Test
     public void whenTempalateHasUnknowKeys() {
         Generator generator = new Generator1();
         template = "I am  ${name}, Who are ${subject}?I am from ${city}";
@@ -34,7 +32,6 @@ class Generator1Test {
     }
 
     @Ignore
-    @Test
     public void whenMapHasUnknowKeys() {
         Generator generator = new Generator1();
         template = "I am ${name}, Who are ${subject}";
@@ -45,7 +42,6 @@ class Generator1Test {
     }
 
     @Ignore
-    @Test
     public void whenWorks() {
         Generator generator = new Generator1();
         template = "I am ${name}, Who are ${subject}";
