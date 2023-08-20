@@ -46,7 +46,7 @@ public class ReportEngineTest {
         ByteArrayInputStream in = new ByteArrayInputStream("RUB\nEUR".getBytes());
         System.setIn(in);
         Report bookkeepingReport = new ReportBookkeeping(store, parser);
-        InMemoryCurrencyConverter converter = new InMemoryCurrencyConverter();
+        InMemoryCurrencyConverter converter = new  InMemoryCurrencyConverter();
         StringBuilder expect = new StringBuilder()
                 .append("Name; Hired; Fired; Salary;")
                 .append(System.lineSeparator())
