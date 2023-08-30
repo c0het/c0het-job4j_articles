@@ -11,4 +11,9 @@ public class ReportDateTimeParser implements DateTimeParser<Calendar> {
     public String parse(Calendar calendar) {
         return DATE_FORMAT.format(calendar.getTime());
     }
+
+    public static SimpleDateFormat getDateFormat() {
+        return DATE_FORMAT;
+    }
+
 }
