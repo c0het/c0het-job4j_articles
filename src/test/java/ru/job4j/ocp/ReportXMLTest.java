@@ -9,6 +9,8 @@ import ru.job4j.ood.srp.store.MemStore;
 
 import java.util.Calendar;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 class ReportXMLTest {
     @Test
     public void jsonReportWithOnlyOneEmployee() {
@@ -24,18 +26,18 @@ class ReportXMLTest {
                 + "<employees>\n"
                 + "    <employee>\n"
                 + "        <name>" + worker.getName() + "</name>\n"
-                + "        <hired>" + worker.getHired() + "</hired>\n"
-                + "        <fired>" + worker.getFired() + "</fired>\n"
+                + "        <hired>" + parser.parse(worker.getHired()) + "</hired>\n"
+                + "        <fired>" + parser.parse(worker.getFired()) + "</fired>\n"
                 + "        <salary>" + worker.getSalary() + "</salary>\n"
                 + "    </employee>\n"
                 + "    <employee>\n"
                 + "        <name>" + worker1.getName() + "</name>\n"
-                + "        <hired>" + worker1.getHired() + "</hired>\n"
-                + "        <fired>" + worker1.getFired() + "</fired>\n"
+                + "        <hired>" + parser.parse(worker1.getHired()) + "</hired>\n"
+                + "        <fired>" + parser.parse(worker1.getFired()) + "</fired>\n"
                 + "        <salary>" + worker1.getSalary() + "</salary>\n"
-                + "     </employee>\n"
-                + "</employees>";
-        System.out.println(reportXML.generate(employee -> true));
+                + "    </employee>\n"
+                + "</employees>\n";
+        assertThat(reportXML.generate(employee -> true)).isEqualTo(expect);
     }
 
 }
